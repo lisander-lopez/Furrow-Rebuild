@@ -1,0 +1,24 @@
+@use '../utils/container';
+@use '../utils/colors' as c;
+.content_section {
+    position: relative;
+}
+
+.content {
+    max-width: 640px;
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-left: 124px;
+}
+
+.dark {
+    .content {
+        color: c.$darkText;
+    }
+}
+
+.light {
+    .content {
+        color: c.$lightText;
+    }
+}

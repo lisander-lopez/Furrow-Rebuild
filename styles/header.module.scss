@@ -1,0 +1,82 @@
+@use './utils/container';
+@use './utils/colors' as c;
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0;
+}
+
+.wrapper {
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top:72px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.logo {
+    a {
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    span {
+        height: 1rem;
+        width: 1rem;
+        margin: 0 -4px;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        bottom: 2px;
+        user-select: none;
+    }
+}
+
+.menu {
+    button {
+        transform-origin: center;
+        border: none;
+        padding: 20px;
+        background: none;
+        outline: none;
+
+        span {
+            width: 36px;
+            height: 8px;
+            display: block;
+            margin: 8px;
+        }
+    }
+}
+
+.dark {
+    .logo {
+        color: c.$darkText;
+
+        span {
+            background-color: c.$darkBackground;
+        }
+    }
+    .menu > button > span {
+        background: c.$darkText;
+    }
+}
+
+.light {
+    .logo {
+        color: c.$lightText;
+
+        span {
+            background: c.$lightBackground;
+        }
+    }
+
+    .menu > button > span {
+        background: c.$lightText;
+    }
+}

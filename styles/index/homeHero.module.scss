@@ -1,0 +1,60 @@
+@use '../utils/colors' as c;
+
+.hero_wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 200px;
+
+    &.light {
+        background: c.$lightBackground;
+    }
+
+    &.dark {
+        background: c.$darkBackground;
+    }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: block;
+    }
+}
+
+.video_wrapper {
+    height: 100%;
+    width: 100%;
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.hero_text_wrapper {
+    position: absolute;
+    bottom: -140px;
+    left: -18px;
+    pointer-events: none;
+    overflow: hidden;
+    h1 {
+        display: block;
+        font-size: 16rem;
+        font-weight: 900;
+        line-height: 0.1;
+    }
+}
+
+.dark {
+    .hero_text_wrapper {
+        color: c.$darkText;
+    }
+}
+
+.light {
+    .hero_text_wrapper {
+        color: c.$lightText;
+    }
+}

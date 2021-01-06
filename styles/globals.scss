@@ -1,0 +1,44 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --webket-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+* { 
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: none; 
+}
+
+/* CUSTOM CURSOR */
+
+html.dark {
+  body {
+    background-color: black;
+    color: #fff;
+  }
+} 
+
+html.light {
+  body {
+    background-color: #fff;
+    color: black;
+  }
+}

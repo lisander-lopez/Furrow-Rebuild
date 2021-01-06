@@ -1,0 +1,24 @@
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    width: auto;
+    height: 100%;
+
+    @media screen and (min-width: 1024px){
+        max-width: 960px;
+    }
+    @media screen and (min-width: 1216px){
+        max-width: 1152px;
+    }
+    @media screen and (min-width: 1408px){
+        max-width: 1244px;
+    }
+
+    &.fluid {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+}

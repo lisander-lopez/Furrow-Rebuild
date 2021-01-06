@@ -1,0 +1,169 @@
+@use "./utils/container" as u;
+@use "./utils/colors" as c;
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.container {
+    .nav_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 0;
+
+        top: 72px;
+        
+        .nav_close {
+            button {
+                transform-origin: center;
+                border: none;
+                padding: 20px;
+                background: none;
+                outline: none;
+
+                span {
+                    width: 36px;
+                    height: 8px;
+                    display: block;
+                    margin: 8px;
+                }
+            }
+        }
+    }
+    
+    .nav_list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 900;
+                height: 96px;
+                line-height: 96px;
+                overflow: hidden;
+                
+                .li_wrapper {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }    
+
+        .nav_arrow {
+            height: 76px;
+            margin-right: 8px;
+
+            svg {
+                width: 100px;
+            }
+        }
+    }
+
+    .nav_footer {
+
+    }
+}
+
+.nav_video_container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    
+    .reveal {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .video {
+        background: #000;
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+
+        video {
+            height: 100%;
+        }
+    }
+}
+
+.dark {
+    background-color: c.$darkBackground;
+    
+    h2 {
+        color: c.$darkText;
+    }
+
+    button {
+        span {
+            background-color: c.$darkText;
+        }
+    }
+
+    .nav_link {
+        color: c.$darkText;
+    }
+
+    svg {
+        path {
+            fill: c.$darkText;       
+        }
+    }
+
+    .reveal {
+        background: c.$darkBackground;
+    }
+}
+
+.light {
+    background-color: c.$lightBackground;
+    
+    h2 {
+        color: c.$lightText;
+    }
+
+    button {
+        span {
+            background-color: c.$lightText;
+        }
+    }
+
+    .nav_link {
+        color: c.$lightText;
+    }
+
+    svg {
+        path {
+            fill: c.$lightText;       
+        }
+    }
+
+    .reveal {
+        background: c.$lightBackground;
+    }
+}
