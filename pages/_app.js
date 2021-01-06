@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   if (!mounted) return null;
 
   return (
-    <ThemeProvider defaultTheme="system" attribute="class">
+    <ThemeProvider defaultTheme="dark" attribute="class">
       <GlobalProvider>
         <Component {...pageProps} />
       </GlobalProvider>
